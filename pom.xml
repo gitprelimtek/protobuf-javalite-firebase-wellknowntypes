@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<artifactId>protobuf-javalite-firebase-wellknowntypes</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<groupId>mtini-protos</groupId>
+	
+	<repositories>
+		 <repository>
+      		<id>google-repo1</id>
+      		<name>google mvn repo</name>
+      		<url>https://maven.google.com</url>
+    	</repository>
+    	<repository>
+      		<id>mvn-repo2</id>
+      		<name>mvn centralrepo</name>
+      		<url>https://mvnrepository.com</url>
+    	</repository>
+	</repositories>
+	<dependencies>
+		<dependency>
+			<groupId>com.google.protobuf</groupId>
+			<artifactId>protobuf-javalite</artifactId>
+			<version>3.10.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.api.grpc</groupId>
+			<artifactId>proto-google-common-protos</artifactId>
+			<version>1.17.0</version>
+		</dependency>
+		
+		<dependency>
+    		<groupId>com.google.firebase</groupId>
+    		<artifactId>protolite-well-known-types</artifactId>
+    		<version>17.0.0</version>
+    		<type>aar</type>
+		</dependency>
+		
+	</dependencies>
+	
+	<build>
+    <finalName>${artifactId}</finalName>
+    <plugins>
+ 
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <version>3.1.1</version>
+
+            <configuration>
+                <descriptorRefs>
+                    <descriptorRef>jar-with-dependencies</descriptorRef>
+                </descriptorRefs>
+            </configuration>
+
+            <executions>
+                <execution>
+                    <id>make-assembly</id>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>single</goal>
+                    </goals>
+                </execution>
+            </executions>
+
+        </plugin>
+
+    </plugins>
+</build>
+</project>
