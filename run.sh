@@ -44,7 +44,7 @@ rm ./classes.jar
 ## create the output jar from extracted
 mkdir ../output/
 
-jar cf ../output/my-protobuf-javalite-firebase-wellknowntypes.jar  * && echo "my-protobuf-javalite-firebase-wellknowntypes.jar created OK " || ( echo "my-protobuf-javalite-firebase-wellknowntypes.jar create failed. Exiting"; exit 1 )
+jar cf ../output/ptek-protobuf-javalite-firebase-wellknowntypes.jar  * && echo "ptek-protobuf-javalite-firebase-wellknowntypes.jar created OK " || ( echo "ptek-protobuf-javalite-firebase-wellknowntypes.jar create failed. Exiting"; exit 1 )
 
-
+ls -l ../output/
 
