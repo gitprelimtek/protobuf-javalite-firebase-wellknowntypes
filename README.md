@@ -1,4 +1,4 @@
-## firestore and inappmessaging protobuf dependecy for java management
+## firestore and inappmessaging protobuf dependecy with protobuf-java artifacts
 
 This repo is in response to issues encountered when transitioning to firebase firestore and inappmessaging. 
 These firebase projects rely on protobuf-lite causes issues for protobuf-java (protobuf-javalite) dependent projects.
