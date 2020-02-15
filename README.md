@@ -36,9 +36,25 @@ If successful fatjar will be in output directory.
 1. Copy the fatjar into your Android studio project lib directory. 
 2. Update the app build.gradle dependencies:
 
+Remove other dependencies:
 ```
-implementation 'com.google.firebase:firebase-firestore:21.4.0'
-implementation files('libs/ptek-protobuf-javalite-firebase-wellknowntypes.jar')
+configurations {
+    compile.exclude group: 'com.google.protobuf', module: 'protobuf-lite'
+    compile.exclude group: 'com.google.firebase', module: 'protolite-well-known-types'
+    compile.exclude group: 'com.google.protobuf' , module: 'protobuf-java-util'
+    compile.exclude group: 'com.google.protobuf' , module: 'protobuf-java'
+    compile.exclude group: 'com.google.protobuf' , module: 'protobuf-javalite'
+ }
+```
+
+Add the fatjar artifact in 
+```
+dependencies {
+  implementation 'com.google.firebase:firebase-firestore:21.4.0'
+  ..
+  ..
+  implementation files('libs/ptek-protobuf-javalite-firebase-wellknowntypes.jar')
+}
 ```
 
 3. Recompile.
