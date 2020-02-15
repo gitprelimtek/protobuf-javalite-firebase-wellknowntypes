@@ -11,29 +11,35 @@ Here are some issues reported in the community related to this workaround:
 - [Git 25](https://github.com/googleapis/java-dialogflow/issues/25)
 
 
-###Getting started
+### Getting started
 Clone this project:
 
-`git clone https://github.com/gitprelimtek/protobuf-javalite-firebase-wellknowntypes.git`
+```
+git clone https://github.com/gitprelimtek/protobuf-javalite-firebase-wellknowntypes.git
+```
 
 ** If you have special version requirements, edit the pom.xml file to reflect the artifact versions you require. **
 
-###Create the fatjar
+### Create the fatjar
 Run the bash script
-`cd protobuf-javalite-firebase-wellknowntypes/
+
+```
+cd protobuf-javalite-firebase-wellknowntypes/
 ./run.sh
 ls -l ./output
-`
+```
+
 If successful fatjar will be in output directory.
 
-###Import the fatjar into android studio
+### Import the fatjar into android studio
 
 1. Copy the fatjar into your Android studio project lib directory. 
 2. Update the app build.gradle dependencies:
 
-`    
+```
 implementation 'com.google.firebase:firebase-firestore:21.4.0'
 implementation files('libs/ptek-protobuf-javalite-firebase-wellknowntypes.jar')
-`
+```
+
 3. Recompile.
 
