@@ -26,7 +26,18 @@ Run the bash script
 ```
 cd protobuf-javalite-firebase-wellknowntypes/
 ./run.sh
-ls -l ./output
+```
+
+The expected output should look like this:
+```
+mvn dependencies downloaded OK
+extracted/ created
+extracted/ found
+protobuf-javalite extracted OK 
+proto-google-common-protos extracted OK 
+protolite-well-known-types extracted OK 
+classes extracted OK 
+my-protobuf-javalite-firebase-wellknowntypes.jar created OK 
 ```
 
 If successful fatjar will be in output directory.
