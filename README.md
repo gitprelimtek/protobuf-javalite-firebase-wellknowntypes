@@ -1,7 +1,7 @@
 ## firestore and inappmessaging protobuf dependecy with protobuf-java artifacts
 
 This repo is in response to issues encountered when transitioning to firebase firestore and inappmessaging. 
-These firebase projects rely on protobuf-lite causes issues for protobuf-java (protobuf-javalite) dependent projects.
+These firebase projects rely on protobuf-lite which causes issues for protobuf-java (protobuf-javalite) dependent projects.
 
 Here are some issues reported in the community related to this workaround:
 
@@ -37,8 +37,11 @@ protobuf-javalite extracted OK
 proto-google-common-protos extracted OK 
 protolite-well-known-types extracted OK 
 classes extracted OK 
-my-protobuf-javalite-firebase-wellknowntypes.jar created OK 
+ptek-protobuf-javalite-firebase-wellknowntypes.jar created OK 
 ```
+
+ptek-protobuf-javalite-firebase-wellknowntypes.jar can be found in output dir.
+
 
 If successful fatjar will be in output directory.
 
